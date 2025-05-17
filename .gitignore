@@ -48,6 +48,7 @@ generate_regression_datasets.py
 kernel_baselines.py
 node_task/
 .ipynb
+gnn_comparison/
 # Ignore files for other projects
 
 data/CIDDS/
