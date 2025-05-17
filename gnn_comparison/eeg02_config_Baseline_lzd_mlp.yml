@@ -1,0 +1,51 @@
+model:
+  - MolecularFingerprint
+device:
+  - cuda:0
+batch_size:
+  - 128
+hidden_units:
+  - 256
+learning_rate:
+  - 0.001
+l2:
+  - 0.0
+classifier_epochs:
+  - 1000
+optimizer:
+  - Adam
+  # - SGD
+scheduler:
+  - null
+loss:
+  - MulticlassClassificationLoss
+gradient_clipping:
+  - null
+early_stopper:
+#   -
+#     class: Patience
+#     args:
+#       patience: 500
+#       use_loss: False
+  -
+    class: Patience
+    args:
+      patience: 500
+      use_loss: True
+shuffle:
+  - True
+  
+
+#   'stats_degree': graph_stats_degree,
+# 'avg_degree': graph_avg_degree,
+# 'avg_cc': node_cc_avg_feature,
+# 'cycle': graph_cycle_feature
+
+additional_graph_features:
+  - degree_dist@sample_len:64
+
+dropout:
+  - 0.4
+
+norm_feature:
+  - False

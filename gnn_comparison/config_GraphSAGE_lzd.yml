@@ -1,0 +1,67 @@
+model:
+  - GraphSAGE
+device:
+  - cuda:0
+batch_size:
+  - 16
+learning_rate:
+  # - 0.0001
+  - 0.01
+  - 0.001
+l2:
+  - 0.001
+  - 0.01
+classifier_epochs:
+  - 1000
+optimizer:
+  - Adam
+scheduler:
+  - null
+loss:
+  - MulticlassClassificationLoss
+gradient_clipping:
+  - null
+early_stopper:
+  -
+    class: Patience
+    args:
+      patience: 500
+      use_loss: False
+shuffle:
+  - True
+dim_embedding:
+  - 64
+num_layers:
+  - 3
+  # - 5
+aggregation:
+# useless.
+  - mean
+  - sum
+  - max
+node_pool:
+  - max
+  - mean
+additional_features:
+  - degree
+  # - tri_cycle
+  # - guassian
+  # - degree,cycle@k:6
+  # - degree,cycle@k:5
+node_attribute:
+  - False
+
+
+# Followings are all additional feature names:
+#                "degree":node_degree_feature,
+    #             "allone":node_allone_feature,
+    #             "index_id":node_index_feature,
+    #             "guassian":node_gaussian_feature,
+    #             "tri_cycle":node_tri_cycles_feature,
+    #             "kadj": node_k_adj_feature,
+    #             "rand_id":node_random_id_feature
+    #             }
+    #     self.registered = []
+
+    # def register(self, arg_str:str=None):
+        # arg_str format: name@key:value;key:value....

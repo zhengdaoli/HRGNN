@@ -1,0 +1,62 @@
+# Ignore logs and temp files
+*.log
+*.tmp
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore dependencies or build files
+node_modules/
+dist/
+venv/
+__pycache__
+!DeepRobust/
+DeepRobust/deeprobust.egg-info
+DeepRobust/dist/
+DeepRobust/docs/
+DeepRobust/.gitignore
+DeepRobust/.git
+
+# Ignore personal or IDE-specific files
+.vscode/
+.idea/
+*.swp
+log/
+*.log
+*.png
+*logs*/
+figs/
+node_task/exp/
+node_task/best_models/
+DATA/
+data/
+betas/
+betagnn/
+data/
+all_results/
+scripts/*.ipynb
+figs/
+DGGN_results/
+DeepRobust/
+# Ignore images
+/*.png
+clintox/
+plots/beta_values_plot_CIDDS_random_Combined.png
+save_statistics.py
+generate_regression_datasets.py
+kernel_baselines.py
+node_task/
+.ipynb
+# Ignore files for other projects
+
+data/CIDDS/
+batched_models.py
+CIDDS.py
+random_attack.py
+train_batched.py
+
+# Ignore irrelevant
+
+old/
+results/*.csv
